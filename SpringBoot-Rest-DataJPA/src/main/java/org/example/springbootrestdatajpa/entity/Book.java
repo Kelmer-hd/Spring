@@ -1,14 +1,18 @@
 package org.example.springbootrestdatajpa.entity;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "Bookss") //Cambiar el nombre a la base de datos
+@ApiModel("Entidad libre ")
 public class Book {
     // Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty("Clave Ficticia autoincrementado tipo Long")
     private Long id;
     private  String title;
     private String author;
